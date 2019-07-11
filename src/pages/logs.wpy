@@ -16,9 +16,8 @@
   }
 </style>
 <template>
-  <view @tap="tap1">{{title}}</view>
-  <view>{{male}}---{{male1}}---{{male2}}</view>
-  <view @tap="change">{{person.name}}----{{person.height}}</view>
+  <view>{{title}}</view>
+  
 </template>
 
 <script>
@@ -62,11 +61,6 @@
     mixins = [testMixin]
 
     data = {
-      person:{
-        name:'小红',
-        height:'100'
-      },
-      male:false,
       title:'这是一个wepy的学习',
       mynum: 20,
       userInfo: {
@@ -121,42 +115,14 @@
         }
       ]
     }
-    myData="傻逼，你好啊"
-    
-    showMsg(msg){
-      console.log(msg)
-    }
-    watch = {
-      person(newValue,oldValue){
-        console.log(newValue,oldValue)
-        this.person.name='小兰'
-      }
-    }
+
     computed = {
-      male1 () {
-        if(this.male){
-          return "男"
-        }else{
-          return "女"
-        }
-      },
-      male2(){
-        if(this.male){
-          return "公"
-        }else{
-          return "母"
-        }
+      now () {
+        return +new Date()
       }
     }
 
     methods = {
-      change(){
-        console.log(456)
-        this.person.height=200
-      },
-      tap1(){
-        this.title="改变啦"
-      },
       plus () {
         this.mynum++
       },
@@ -209,13 +175,6 @@
     }
 
     onLoad() {
-      this.showMsg(this.myData)
-      // setInterval(()=>{
-      //   this.title=Date.now()
-      //   console.log( this.title)
-      //   //想要在异步中动态改变视图数据必须手动调用this.$apply()
-      //   this.$apply()
-      // },1000)
       let self = this
       this.$parent.getUserInfo(function (userInfo) {
         if (userInfo) {

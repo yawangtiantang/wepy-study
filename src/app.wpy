@@ -35,14 +35,24 @@ export default class extends wepy.app {
     }
   config = {
     pages: [
-      'pages/index'
+      'pages/index',
+      'pages/logs'
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
+      navigationBarBackgroundColor: 'blue',
+      navigationBarTitleText: 'hello world',
       navigationBarTextStyle: 'black'
-    }
+    },
+    "tabBar": {
+    "list": [{
+      "pagePath": "pages/index",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/logs",
+      "text": "日志"
+    }]
+  },
   }
 
   globalData = {

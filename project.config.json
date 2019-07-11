@@ -8,7 +8,7 @@
 	},
 	"compileType": "miniprogram",
 	"appid": "wx4493c2a7dabf8d67",
-	"projectname": "wep",
+	"projectname": "wepy-study",
 	"miniprogramRoot": "dist/",
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
