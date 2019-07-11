@@ -35,12 +35,14 @@ export default class extends wepy.app {
     }
   config = {
     pages: [
+      'pages/index2',
       'pages/index',
       'pages/logs'
+      
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: 'blue',
+      navigationBarBackgroundColor: '#555',
       navigationBarTitleText: 'hello world',
       navigationBarTextStyle: 'black'
     },

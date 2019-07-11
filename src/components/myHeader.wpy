@@ -1,0 +1,47 @@
+<style lang="less">
+  .myHeader{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background-color: yellow;
+  }
+</style>
+<template>
+  <view class="myHeader">我的头部组件:{{name}}</view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+  
+
+  export default class Index extends wepy.page {
+    config = {
+      navigationBarTitleText: '我的组件测试',
+      navigationBarTextStyle:'white'
+    }
+    components = {
+     
+    }
+
+   
+
+    data = {
+      name:'你的头'
+    }
+   
+    watch = {
+     
+    }
+    computed = {
+     
+    }
+
+    methods = {
+      
+    }
+
+    onLoad() {
+     
+    }
+  }
+</script>
